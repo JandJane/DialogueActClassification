@@ -1,0 +1,6 @@
+nltk>=3.0
+numpy~=1.19.5
+torch~=1.10.2
+ipdb~=0.13.9
+scikit-learn~=0.24.2
+transformers>=3.4.0
