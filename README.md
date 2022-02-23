@@ -30,5 +30,5 @@ Data is split into train, valid and test subsets according to ["Sequential Short
 1. Clone the repo: `git clone --recurse-submodules https://github.com/JandJane/DialogueActClassification.git`
 2. Unzip data: `unzip DialogueActClassification/swda/swda.zip -d DialogueActClassification/swda/swda`
 3. Install requirements: `pip install -r DialogueActClassification/requirements.txt`
-4. Run `train_model.ipynb` notebook (training takes about 5 hours on Google Colab)
+4. Run `train_model.ipynb` notebook (training takes about 6 hours on Google Colab)
 
