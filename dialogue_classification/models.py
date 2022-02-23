@@ -36,7 +36,7 @@ class Net(nn.Module):
         else:
             self.attention = None
 
-        self.bert = BertModel.from_pretrained('bert-base-uncased') # TODO
+        self.bert = BertModel.from_pretrained('bert-base-uncased')
 
         for param in self.bert.parameters():
             param.requires_grad = False
@@ -69,9 +69,6 @@ class Net(nn.Module):
 
     def forward(self, input_ids, attention_masks, input_lengths, labels=None):
         batch_size, seq_len = input_ids.size(0), input_ids.size(1)
-
-        # Masks for input sequences
-        # TODO
 
         # Get Bert utterance embeddings
         bert_output = self.bert(
