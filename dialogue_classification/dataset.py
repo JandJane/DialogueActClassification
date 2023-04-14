@@ -1,7 +1,7 @@
 from torch.utils.data import Dataset
 
 
-class DialogueDataset(Dataset):
+class BertDataset(Dataset):
     def __init__(self, input_ids, attention_masks, input_lengths, y):
         super().__init__()
         self.input_ids = input_ids
@@ -19,3 +19,21 @@ class DialogueDataset(Dataset):
 
     def __len__(self):
         return len(self.input_ids)
+
+    
+class FasttextDataset(Dataset):
+    def __init__(self, input_embs, input_lengths, y):
+        super().__init__()
+        self.input_embs = input_embs
+        self.input_lengths = input_lengths
+        self.y = y
+
+    def __getitem__(self, idx):
+        return {
+            'inputs': self.input_embs[idx],
+            'input_lengths': self.input_lengths[idx],
+            'labels': self.y[idx],
+        }
+
+    def __len__(self):
+        return len(self.input_embs)
