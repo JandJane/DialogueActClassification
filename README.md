@@ -13,7 +13,6 @@ Data is split into train, valid and test subsets according to ["Sequential Short
 
 ##  Results
 
-```markdown
 | Model                                      | Accuracy, % |
 |--------------------------------------------|-------------|
 | Tf-Idf + LightGBM without context          | 63.89       |
@@ -21,8 +20,8 @@ Data is split into train, valid and test subsets according to ["Sequential Short
 | Pretrained Bert + LightGBM without context | 66.61       |
 | Fasttext + Hierarchical RNN                | 76.63       |
 | Pretrained Bert + RNN                      | 76.56       |
-| Fine-tuned Bert + RNN                      | 78.05       |
-```
+| Fine-tuned Bert + RNN                      | **78.05**   |
+
 
 ## Reproducing the results
 
